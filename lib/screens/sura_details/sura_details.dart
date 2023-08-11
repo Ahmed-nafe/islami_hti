@@ -24,12 +24,8 @@ class _SuraDetailsState extends State<SuraDetails> {
       ),
       child: Scaffold(
         appBar: AppBar(
-          elevation: 0,
-          centerTitle: true,
-          backgroundColor: Colors.transparent,
-          title: Text(args.suraName, style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: AppColors.accentColor),),
+          title: Text(args.suraName),
         ),
-        backgroundColor: Colors.transparent,
         body:suraLines.isEmpty ?Center(child: CircularProgressIndicator()) :
         ListView.builder(
             itemCount: suraLines.length,

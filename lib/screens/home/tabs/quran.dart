@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_hti/app_colors.dart';
 import 'package:islami_hti/screens/sura_details/sura_details.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class QuranTab extends StatelessWidget {
   QuranTab({Key? key}) : super(key: key);
@@ -135,12 +136,9 @@ class QuranTab extends StatelessWidget {
           thickness: 3,
         ),
         Text(
-          "Sura Name",
+          AppLocalizations.of(context)!.suraName,
           textAlign: TextAlign.center,
-          style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.w500,
-              color: AppColors.accentColor),
+          style: Theme.of(context).textTheme.bodySmall,
         ),
         Divider(
           color: AppColors.primiaryColor,
@@ -168,10 +166,7 @@ class QuranTab extends StatelessWidget {
       child: Text(
         suraName,
         textAlign: TextAlign.center,
-        style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: AppColors.accentColor,
-            fontSize: 25),
+        style: Theme.of(context).textTheme.bodySmall,
       ),
     );
   }
